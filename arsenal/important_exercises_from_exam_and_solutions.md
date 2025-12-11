@@ -236,6 +236,60 @@ The right side would be: α²|00⟩ + αβ|01⟩ + αβ|10⟩ + β²|11⟩
 
 ---
 
+## Exercise 2c: EPR Pairs and Faster-Than-Light Communication
+
+**Problem:** Using shared EPR-pairs, Alice and Bob can communicate with each other instantaneously (faster than light). Is this true or false? Justify your answer.
+
+---
+
+### Answer: FALSE
+
+---
+
+### Why EPR Pairs Can't Send Information FTL
+
+**1. Correlations ≠ Communication**
+
+EPR pair: (|00⟩ + |11⟩)/√2
+
+- When Alice measures, she gets 0 or 1 (50/50 random)
+- Bob's qubit collapses to match Alice's result
+- But Bob ALSO sees 0 or 1 (50/50 random)
+- Bob can't tell if Alice measured or not — his statistics look the same either way
+
+**2. No way to encode a message**
+
+- Alice can't control her measurement outcome (it's random)
+- Alice's choice of measurement basis doesn't change Bob's local statistics
+- Bob always sees random results until they compare via classical channel
+
+**3. Classical communication still needed**
+
+To USE the correlations, Alice and Bob must:
+- Meet beforehand to share the EPR pair
+- Communicate classically afterward to compare results
+- Classical communication is limited by speed of light
+
+---
+
+### The No-Signaling Theorem
+
+> Quantum mechanics guarantees that entanglement alone cannot transmit information. Local measurements on one half of an entangled pair cannot affect the probability distribution of outcomes on the other half.
+
+---
+
+### One-Liner Answer
+
+> Entanglement creates correlations, not communication. Bob's local measurement statistics are independent of what Alice does — he always sees random outcomes until they compare results classically.
+
+---
+
+### Exam Takeaway
+
+> **EPR ≠ FTL:** Entanglement is correlated randomness, not a telephone. No information travels until classical communication happens (which is limited by speed of light).
+
+---
+
 ## Exercise 3: Applying (H ⊗ I)CNOT to a Two-Qubit State
 
 **Problem:**
