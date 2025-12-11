@@ -200,6 +200,42 @@ The right side would be: α²|00⟩ + αβ|01⟩ + αβ|10⟩ + β²|11⟩
 
 ---
 
+## Exercise 2b: No-Deleting Theorem
+
+**Problem:** Show that unitaries cannot "delete" information: there is no one-qubit unitary U that maps |ϕ⟩ → |0⟩ for every one-qubit state |ϕ⟩.
+
+---
+
+### Why It's Impossible
+
+**Key fact:** Unitaries preserve inner products.
+
+```
+⟨ψ|φ⟩ = ⟨Uψ|Uφ⟩    (always true for unitary U)
+```
+
+**The problem:** If U mapped everything to |0⟩:
+- ⟨Uψ|Uφ⟩ = ⟨0|0⟩ = 1 for ALL pairs of states
+
+**But:** Some states are orthogonal:
+- ⟨0|1⟩ = 0 ≠ 1
+
+**Contradiction!** → No such U exists.
+
+---
+
+### One-Liner Answer
+
+> Unitaries preserve distinguishability. Orthogonal states stay orthogonal. Mapping everything to |0⟩ would make all states indistinguishable — impossible.
+
+---
+
+### Exam Takeaway
+
+> **No-deleting:** Same logic as no-cloning. Unitaries preserve inner products, so they can't collapse all states to one state.
+
+---
+
 ## Exercise 3: Applying (H ⊗ I)CNOT to a Two-Qubit State
 
 **Problem:**
