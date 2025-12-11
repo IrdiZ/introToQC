@@ -279,9 +279,45 @@ $$= \frac{1}{\sqrt{6}}|00\rangle + \frac{1}{\sqrt{6}}|10\rangle + \frac{\sqrt{2}
 
 ---
 
-### Final Answer
+### Final Answer (Part a)
 
 $$\boxed{\frac{1+\sqrt{2}}{\sqrt{6}}|00\rangle + \frac{1-\sqrt{2}}{\sqrt{6}}|10\rangle}$$
+
+---
+
+### Part b: Measurement Probability
+
+**Problem:** What is the probability of seeing |11⟩ if we measure the resulting state in the computational basis?
+
+**Method:** P(outcome) = |coefficient|²
+
+**Step 1:** Identify the coefficient of |11⟩ in our final state
+
+Final state: $\frac{1+\sqrt{2}}{\sqrt{6}}|00\rangle + \frac{1-\sqrt{2}}{\sqrt{6}}|10\rangle$
+
+Basis states present:
+- |00⟩ ✓ (coefficient = (1+√2)/√6)
+- |10⟩ ✓ (coefficient = (1-√2)/√6)
+- |01⟩ ✗ (not present)
+- |11⟩ ✗ (not present)
+
+**Step 2:** Coefficient of |11⟩ = 0
+
+**Step 3:** Square it
+
+$$P(|11\rangle) = |0|^2 = 0$$
+
+**Answer:** P(|11⟩) = 0
+
+---
+
+### Bonus: Other Measurement Probabilities
+
+$$P(|00\rangle) = \left|\frac{1+\sqrt{2}}{\sqrt{6}}\right|^2 = \frac{(1+\sqrt{2})^2}{6} = \frac{1 + 2\sqrt{2} + 2}{6} = \frac{3 + 2\sqrt{2}}{6}$$
+
+$$P(|10\rangle) = \left|\frac{1-\sqrt{2}}{\sqrt{6}}\right|^2 = \frac{(1-\sqrt{2})^2}{6} = \frac{1 - 2\sqrt{2} + 2}{6} = \frac{3 - 2\sqrt{2}}{6}$$
+
+**Verification:** P(|00⟩) + P(|10⟩) = (3+2√2)/6 + (3-2√2)/6 = 6/6 = 1 ✓
 
 ---
 
