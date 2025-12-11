@@ -113,3 +113,89 @@ Or use: P(|−⟩) = 1 − P(|+⟩) = 1 − 49/50 = **1/50**
 | ⟨−\|1⟩ | −1/√2 |
 
 ---
+
+## Exercise 2: No-Cloning Theorem
+
+**Problem:**
+Explain why classical copying of a quantum state is not possible (no-cloning theorem).
+
+---
+
+### Key Concept
+
+**No-Cloning Theorem:** There is no unitary operation U that can copy an arbitrary unknown quantum state.
+
+---
+
+### Solution (Proof by Contradiction)
+
+**Setup:** Suppose a universal cloning unitary U exists. It must satisfy:
+
+$$U|\psi\rangle|0\rangle = |\psi\rangle|\psi\rangle \quad \text{for any state } |\psi\rangle$$
+
+**Step 1:** Apply to two arbitrary states |ψ⟩ and |φ⟩
+
+$$U|\psi\rangle|0\rangle = |\psi\rangle|\psi\rangle$$
+$$U|\phi\rangle|0\rangle = |\phi\rangle|\phi\rangle$$
+
+**Step 2:** Take the inner product of both equations
+
+**Left side:**
+$$\langle\psi|\langle 0|U^\dagger U|\phi\rangle|0\rangle = \langle\psi|\phi\rangle\langle 0|0\rangle = \langle\psi|\phi\rangle$$
+
+(using U†U = I for unitary operators)
+
+**Right side:**
+$$\langle\psi|\langle\psi|\phi\rangle|\phi\rangle = \langle\psi|\phi\rangle \cdot \langle\psi|\phi\rangle = \langle\psi|\phi\rangle^2$$
+
+**Step 3:** Set equal and solve
+
+$$\langle\psi|\phi\rangle = \langle\psi|\phi\rangle^2$$
+
+Let x = ⟨ψ|φ⟩. Then x = x², which has only two solutions:
+- x = 0 (orthogonal states)
+- x = 1 (identical states)
+
+**Step 4:** Contradiction
+
+A universal cloner must work for ANY pair of states, including non-orthogonal states where 0 < |⟨ψ|φ⟩| < 1. But x = x² forbids this.
+
+**∴ No universal quantum cloner exists. ∎**
+
+---
+
+### The CNOT Trap
+
+**Common mistake:** "CNOT can copy quantum states"
+
+CNOT does copy basis states:
+- CNOT|0⟩|0⟩ = |0⟩|0⟩ ✓
+- CNOT|1⟩|0⟩ = |1⟩|1⟩ ✓
+
+**But for superpositions:**
+
+$$\text{CNOT}(\alpha|0\rangle + \beta|1\rangle)|0\rangle = \alpha|00\rangle + \beta|11\rangle$$
+
+This is an **entangled state**, NOT two independent copies:
+
+$$\alpha|00\rangle + \beta|11\rangle \neq (\alpha|0\rangle + \beta|1\rangle) \otimes (\alpha|0\rangle + \beta|1\rangle)$$
+
+The right side would be: α²|00⟩ + αβ|01⟩ + αβ|10⟩ + β²|11⟩
+
+---
+
+### Classical vs Quantum Copying
+
+| Classical bits | Quantum bits |
+|---------------|--------------|
+| Can copy freely: 0 → 00, 1 → 11 | Cannot copy unknown states |
+| Reading doesn't disturb state | Measurement collapses state |
+| CNOT copies basis states | CNOT creates entanglement for superpositions |
+
+---
+
+### Exam Takeaway
+
+> **No-cloning proof:** Inner product argument gives x = x², only satisfied by x = 0 or x = 1. Non-orthogonal states (0 < |x| < 1) cannot be cloned.
+
+---
