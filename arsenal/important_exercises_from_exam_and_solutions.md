@@ -343,3 +343,64 @@ $$= \frac{|00\rangle}{\sqrt{2}} + \frac{|10\rangle}{\sqrt{2}} = \frac{|00\rangle
 > **Tensor product distributes:** (|a⟩ + |b⟩) ⊗ |c⟩ = |a⟩⊗|c⟩ + |b⟩⊗|c⟩ = |ac⟩ + |bc⟩
 
 ---
+
+### Worked Example: Applying to H ⊗ I
+
+**Goal:** Compute (H ⊗ I)|00⟩
+
+**Step 1:** Split into two qubits
+$$|00\rangle = |0\rangle \otimes |0\rangle$$
+
+**Step 2:** Apply operators to their qubits
+$$(H \otimes I)|00\rangle = (H|0\rangle) \otimes (I|0\rangle)$$
+
+**Step 3:** Compute each part
+- H|0⟩ = (|0⟩ + |1⟩)/√2
+- I|0⟩ = |0⟩
+
+**Step 4:** Tensor the results
+$$= \frac{|0\rangle + |1\rangle}{\sqrt{2}} \otimes |0\rangle$$
+
+**Step 5:** Distribute (append |0⟩ to each term on the left)
+$$= \frac{|0\rangle \otimes |0\rangle + |1\rangle \otimes |0\rangle}{\sqrt{2}}$$
+
+**Step 6:** Use shorthand
+$$= \frac{|00\rangle + |10\rangle}{\sqrt{2}}$$
+
+---
+
+### Another Example: (H ⊗ I)|10⟩
+
+**Step 1:** Split
+$$|10\rangle = |1\rangle \otimes |0\rangle$$
+
+**Step 2:** Apply operators
+$$(H \otimes I)|10\rangle = (H|1\rangle) \otimes (I|0\rangle)$$
+
+**Step 3:** Compute each part
+- H|1⟩ = (|0⟩ − |1⟩)/√2
+- I|0⟩ = |0⟩
+
+**Step 4:** Tensor
+$$= \frac{|0\rangle - |1\rangle}{\sqrt{2}} \otimes |0\rangle$$
+
+**Step 5:** Distribute (append |0⟩ to each term)
+$$= \frac{|0\rangle \otimes |0\rangle - |1\rangle \otimes |0\rangle}{\sqrt{2}}$$
+
+**Step 6:** Shorthand
+$$= \frac{|00\rangle - |10\rangle}{\sqrt{2}}$$
+
+---
+
+### Quick Reference: H ⊗ I Results
+
+| Input | Output |
+|-------|--------|
+| (H ⊗ I)\|00⟩ | (\|00⟩ + \|10⟩)/√2 |
+| (H ⊗ I)\|01⟩ | (\|01⟩ + \|11⟩)/√2 |
+| (H ⊗ I)\|10⟩ | (\|00⟩ − \|10⟩)/√2 |
+| (H ⊗ I)\|11⟩ | (\|01⟩ − \|11⟩)/√2 |
+
+**Pattern:** H changes the first qubit, second qubit stays the same.
+
+---
