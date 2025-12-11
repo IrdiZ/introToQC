@@ -199,3 +199,98 @@ The right side would be: α²|00⟩ + αβ|01⟩ + αβ|10⟩ + β²|11⟩
 > **No-cloning proof:** Inner product argument gives x = x², only satisfied by x = 0 or x = 1. Non-orthogonal states (0 < |x| < 1) cannot be cloned.
 
 ---
+
+## Exercise 3: Applying (H ⊗ I)CNOT to a Two-Qubit State
+
+**Problem:**
+Which quantum state do we get if we apply (H ⊗ I)CNOT to √(1/3)|00⟩ + √(2/3)|11⟩?
+
+Here I is the 1-qubit identity operation, H is the one-qubit Hadamard, and CNOT is the 2-qubit controlled-not operation with the first (=leftmost) qubit being the control.
+
+---
+
+### Key Concepts
+
+**Operator order:** In (H ⊗ I)CNOT|ψ⟩, apply operators **right-to-left**:
+1. CNOT first (closest to state)
+2. H ⊗ I second
+
+**Tensor product of operators:** (A ⊗ B)|ab⟩ = (A|a⟩) ⊗ (B|b⟩)
+- First operator acts on first qubit
+- Second operator acts on second qubit
+
+**Identity operator:** I|x⟩ = |x⟩ (does nothing)
+
+---
+
+### Solution
+
+**Step 1: Initial state**
+
+$$|\psi_0\rangle = \sqrt{\frac{1}{3}}|00\rangle + \sqrt{\frac{2}{3}}|11\rangle$$
+
+---
+
+**Step 2: Apply CNOT**
+
+CNOT rule: flip 2nd qubit if 1st qubit is |1⟩
+
+| Input | Control (q1) | Target flips? | Output |
+|-------|--------------|---------------|--------|
+| \|00⟩ | 0 | No | \|00⟩ |
+| \|11⟩ | 1 | Yes (1→0) | \|10⟩ |
+
+State after CNOT:
+$$|\psi_1\rangle = \sqrt{\frac{1}{3}}|00\rangle + \sqrt{\frac{2}{3}}|10\rangle$$
+
+---
+
+**Step 3: Apply H ⊗ I**
+
+H acts on qubit 1, I (identity) acts on qubit 2.
+
+**For |00⟩:** (first qubit is |0⟩)
+$$(H \otimes I)|00\rangle = (H|0\rangle) \otimes |0\rangle = \frac{|0\rangle + |1\rangle}{\sqrt{2}} \otimes |0\rangle = \frac{|00\rangle + |10\rangle}{\sqrt{2}}$$
+
+**For |10⟩:** (first qubit is |1⟩)
+$$(H \otimes I)|10\rangle = (H|1\rangle) \otimes |0\rangle = \frac{|0\rangle - |1\rangle}{\sqrt{2}} \otimes |0\rangle = \frac{|00\rangle - |10\rangle}{\sqrt{2}}$$
+
+---
+
+**Step 4: Combine with coefficients (linearity)**
+
+$$|\psi_2\rangle = \sqrt{\frac{1}{3}} \cdot \frac{|00\rangle + |10\rangle}{\sqrt{2}} + \sqrt{\frac{2}{3}} \cdot \frac{|00\rangle - |10\rangle}{\sqrt{2}}$$
+
+---
+
+**Step 5: Expand**
+
+$$= \frac{1}{\sqrt{6}}|00\rangle + \frac{1}{\sqrt{6}}|10\rangle + \frac{\sqrt{2}}{\sqrt{6}}|00\rangle - \frac{\sqrt{2}}{\sqrt{6}}|10\rangle$$
+
+(Note: √(1/3) · 1/√2 = 1/√6 and √(2/3) · 1/√2 = √2/√6)
+
+---
+
+**Step 6: Collect like terms**
+
+|00⟩ coefficient: 1/√6 + √2/√6 = (1 + √2)/√6
+
+|10⟩ coefficient: 1/√6 − √2/√6 = (1 − √2)/√6
+
+---
+
+### Final Answer
+
+$$\boxed{\frac{1+\sqrt{2}}{\sqrt{6}}|00\rangle + \frac{1-\sqrt{2}}{\sqrt{6}}|10\rangle}$$
+
+---
+
+### Exam Takeaways
+
+> **Operator order:** (A)(B)|ψ⟩ means apply B first, then A (right-to-left)
+
+> **Tensor product shortcut:** |x⟩ ⊗ |0⟩ = |x0⟩ (just append the second qubit)
+
+> **Linearity:** U(α|ψ⟩ + β|φ⟩) = αU|ψ⟩ + βU|φ⟩ — coefficients stay, only kets transform
+
+---
