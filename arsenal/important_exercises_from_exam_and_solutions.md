@@ -294,3 +294,52 @@ $$\boxed{\frac{1+\sqrt{2}}{\sqrt{6}}|00\rangle + \frac{1-\sqrt{2}}{\sqrt{6}}|10\
 > **Linearity:** U(α|ψ⟩ + β|φ⟩) = αU|ψ⟩ + βU|φ⟩ — coefficients stay, only kets transform
 
 ---
+
+## Key Concept: Tensor Product Notation
+
+### The Rule
+
+For tensor product of operators acting on a two-qubit state:
+
+$$(A \otimes B)|cd\rangle = (A|c\rangle) \otimes (B|d\rangle)$$
+
+- First operator (A) acts on first qubit (c)
+- Second operator (B) acts on second qubit (d)
+
+---
+
+### Shorthand Notation
+
+The ⊗ symbol is often hidden in compact notation:
+
+| Full notation | Shorthand |
+|---------------|-----------|
+| \|0⟩ ⊗ \|0⟩ | \|00⟩ |
+| \|1⟩ ⊗ \|0⟩ | \|10⟩ |
+| \|0⟩ ⊗ \|1⟩ | \|01⟩ |
+| \|1⟩ ⊗ \|1⟩ | \|11⟩ |
+| \|a⟩ ⊗ \|b⟩ | \|ab⟩ |
+
+---
+
+### Example: Distributing Tensor Product
+
+When you have a superposition tensored with a single state:
+
+$$\frac{|0\rangle + |1\rangle}{\sqrt{2}} \otimes |0\rangle$$
+
+Distribute the ⊗ over the sum:
+
+$$= \frac{|0\rangle \otimes |0\rangle}{\sqrt{2}} + \frac{|1\rangle \otimes |0\rangle}{\sqrt{2}}$$
+
+Then use shorthand:
+
+$$= \frac{|00\rangle}{\sqrt{2}} + \frac{|10\rangle}{\sqrt{2}} = \frac{|00\rangle + |10\rangle}{\sqrt{2}}$$
+
+---
+
+### Exam Takeaway
+
+> **Tensor product distributes:** (|a⟩ + |b⟩) ⊗ |c⟩ = |a⟩⊗|c⟩ + |b⟩⊗|c⟩ = |ac⟩ + |bc⟩
+
+---
